@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: url('wimpy-kid-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('DALL·E\ 2025-02-21\ 16.58.53\ -\ A\ detailed\ black-and-white\ doodle-style\ background\ featuring\ original\ cartoon\ characters\ inspired\ by\ the\ style\ of\ _Diary\ of\ a\ Wimpy\ Kid._\ The\ illustra.webp');
+  background-position: 100%;
+}
+
+
+.container {
+  background: #FFAB00;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #2c2c2c;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.form-toggle button.active {
+  color: #2C2C2C;
+  border-bottom: 2px solid #FFAB00;
+  transform: scale(1.1);
+}
+
+.form-toggle button:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  color: #2C2C2C;
+  font-size: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+  border-color: black;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+}
+
+.form button {
+  padding: 10px;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.form button:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form-toggle button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px;
+  }
+
+  .form h2 {
+    font-size: 20px;
+  }
+}
+
+/* Main Page Styles */
+.main-nav {
+  background: #FFAB00;
+  padding: 15px 0;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #2C2C2C;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
+}
+
+.login-btn {
+  background: #2C2C2C;
+  /* important-  to override the external css */
+  color: white !important;  
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.hero {
+  margin-top: 50px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cta-buttons button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.read-now {
+  background: #2C2C2C;
+  color: white;
+}
+
+.buy-book {
+  background: white;
+  color: #2C2C2C;
+  border: 2px solid #2C2C2C !important;
+}
+
+.story-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.book-cover img {
+  max-height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.story-text {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.purchase-section {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.price {
+  font-size: 2em;
+  margin: 20px 0;
+  color: #2C2C2C;
+}
+
+.buy-btn {
+  background: #2C2C2C;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.main-footer {
+  margin-top: 50px;
+  padding: 30px 0;
+  text-align: center;
+  background: #FFAB00;
+}
+
+@media (max-width: 768px) {
+
+  .hero-content,
+  .story-content,
+  .purchase-section {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9em;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+}
