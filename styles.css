@@ -1,0 +1,761 @@
+/* styles.css - Unified Stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: url('wimpy-kid-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-image: url('DALL·E\ 2025-02-21\ 16.58.53\ -\ A\ detailed\ black-and-white\ doodle-style\ background\ featuring\ original\ cartoon\ characters\ inspired\ by\ the\ style\ of\ _Diary\ of\ a\ Wimpy\ Kid._\ The\ illustra.webp');
+  color: #2C2C2C;
+  background: image opacity 0.9em;;
+  line-height: 1.6;
+}
+
+/* Login/Signup Page Specific Styles */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('DALL·E\ 2025-02-21\ 16.58.53\ -\ A\ detailed\ black-and-white\ doodle-style\ background\ featuring\ original\ cartoon\ characters\ inspired\ by\ the\ style\ of\ _Diary\ of\ a\ Wimpy\ Kid._\ The\ illustra.webp');
+  background-position: 100%;
+}
+
+.login-container {
+  background: #FFAB00;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #2c2c2c;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.form-toggle button.active {
+  color: #2C2C2C;
+  border-bottom: 2px solid #FFAB00;
+  transform: scale(1.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+  border-color: black;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+}
+
+.form button {
+  padding: 10px;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Main Site Styles */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  background: #FFAB00;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 100px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: #2C2C2C;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.navbar-links a:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+/* Content Sections */
+.book-gallery,
+.movie-showcase {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.book-gallery .h2 {
+  color: #FFAB00;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.book-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  background-size: contain;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .hero-container,
+  .book-content,
+  .book-details,
+  .movie-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    gap: 10px;
+    font-size: 0.9em;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-toggle button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px;
+  }
+
+  .form h2 {
+    font-size: 20px;
+  }
+}
+
+/* Footer */
+/* General Footer Styling */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 0 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: #FFAB00;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: #FFAB00;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-social .social-icon {
+  color: #FFAB00;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.footer-social .social-icon:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Decorative Images */
+.footer-decor {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-decor .decor-img {
+  height: 50px;
+  margin: 0 15px;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Bottom Copyright */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    margin: 10px 0;
+  }
+
+  .footer-decor .decor-img {
+    height: 40px;
+  }
+}
+
+/* Decorative Background Elements */
+.decorative-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.paint-splash {
+  position: absolute;
+  opacity: 0.6;
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.falling-guy {
+  position: absolute;
+  bottom: -50px;
+  right: 10%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Decorative Background Elements */
+.decorative-background {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.paint-splash {
+  position: absolute;
+  opacity: 0.6;
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.falling-guy {
+  position: absolute;
+  bottom: -50px;
+  right: 10%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Book Collection Section */
+.book-collection {
+  padding: 20px;
+  text-align: center;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.book-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-10px);
+}
+
+.book-image {
+  width: 100%;
+  height: 400px;
+  /* Fixed height for all images */
+  object-fit: fill;
+  /* Ensures images maintain aspect ratio */
+  border-bottom: 2px solid #f6c700;
+  background-size: cover;
+}
+
+.book-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.book-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.book-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f6c700;
+  color: #222;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FFAB00;
+}
+
+/* More from Wimpy World Section */
+.extras {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+}
+
+.extras h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.extra-books {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.extra-book-item {
+  flex: 1 1 200px;
+  /* Flexible sizing with a minimum width of 200px */
+  max-width: 300px;
+  /* Maximum width for larger screens */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.extra-book-item:hover {
+  transform: translateY(-10px);
+}
+
+.extra-book-image {
+  width: 100%;
+  height: 500px;
+  /* Fixed height for all images */
+  object-fit: contain;
+  /* Ensures images maintain aspect ratio */
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://wimpykid.com/wp-content/themes/wimpykid/webroot/img/bgr-paint-swipe.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.hero-content .lead {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color:black;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary {
+  background: #FFAB00;
+  color: #222;
+}
+
+.btn-secondary {
+  background: #222;
+  color: #fff;
+  border: 2px solid #FFAB00;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-5px);
+}
+
+.hero-decor {
+  position: absolute;
+  bottom: -50px;
+  right: 10%;
+  height: 150px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Popular Books Section */
+.book-gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-view-all {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #FFAB00;
+  color: #222;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-view-all:hover {
+  background: #FFAB00;
+}
+
+/* Movie Showcase Section */
+.movie-showcase {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+.movie-image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* More from Wimpy World Section */
+.wimpy-world {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.wimpy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.wimpy-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.wimpy-card:hover {
+  transform: translateY(-10px);
+}
+
+.wimpy-image {
+  width: 50%;
+  height: 300px;
+  object-fit: fill;
+  background-size: cover;
+}
+
+.wimpy-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+}
+
+.wimpy-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
